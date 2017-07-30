@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="neo" ng-controller="NeoController as neo">
+<head>
+	<script type="text/javascript" src="src/jquery-2.1.1.min.js"></script>
+	<script src="src/angular.min.js"></script>
+	<style type="text/css">
+		@font-face {
+			font-family: "Faux Coffee Shop";
+			src: url(FauxCoffeeShop-normal.ttf) format("truetype");
+		}
+		.coffee { 
+			font-family: "Faux Coffee Shop", monospace;
+		}
+		</style>
+		<script type="text/javascript">
+			(function(){
+				var neo = angular
+					.module('neo',[])
+					.controller('NeoController',NeoController);
+				function NeoController(){
+					var neo = this;
+					neo.text = "Hello_WORLD";
+					console.log("aaa");
+				}
+			})();
+		</script>
+</head>
+<body>
+	<input ng-model="neo.text" style="font-size: 100px;">
+	<p class="coffee" style="font-size: 100px;">{{neo.text}}</p>
+</body>
+</htmL>
